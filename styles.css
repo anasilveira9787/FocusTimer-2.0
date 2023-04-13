@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    max-width: 82.1rem;
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    width: 32.1rem;
+    height: 21.3rem;
+    place-content: center;
+}
+
+#timer h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #323238;
+
+}
+
+
+#timer ul {
+    display: flex;
+    list-style-type: none;
+    gap: 4rem;
+    justify-content: center;
+}
+
+#timer ul li{
+    cursor: pointer;
+}
+
+#sounds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 30.8rem;
+    height: 33.6rem;
+    gap: 3.2rem;
+}
+
+.sound {
+    width: 13.8rem;
+    height: 15.2rem;
+    background: #E1E1E6;
+    border-radius: 24px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sound svg path{
+    transition: .3s;
+}
+
+.sound:hover, .sound.active {
+    background: #02799D;
+}
+
+.sound:hover svg path , .sound.active svg path{
+    fill: #E1E1E6;
+}
+
