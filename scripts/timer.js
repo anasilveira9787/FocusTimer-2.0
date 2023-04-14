@@ -30,15 +30,16 @@ export default function Timer({
             updateDisplay(minutes, 0)
     
             if (isFinished) {
+                Sounds().timeEnd() 
                 reset()
                 updateDisplay()
-                Sounds().timeEnd()          
+                         
                 return
             } 
             
     
             if(seconds <= 0 ) {
-                seconds = 5
+                seconds = 60
                 --minutes
             }
 
@@ -56,8 +57,12 @@ export default function Timer({
     }
 
     function lessFiveMinutes() {
-        let minutes = Number(minutesDisplay.textContent)
-        let seconds = Number(secondsDisplay.textContent)
+        const minutes = Number(minutesDisplay.textContent)
+        const seconds = Number(secondsDisplay.textContent)
+
+        if (minutes <= 5) {
+            return
+        }
         updateDisplay(minutes - 5, seconds)
     }
 

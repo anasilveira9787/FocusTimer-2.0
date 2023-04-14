@@ -1,5 +1,3 @@
-import Sounds from "./sounds.js"
-
 import { 
     buttonPlay,
     buttonStop,
@@ -11,7 +9,6 @@ import {
     fireplaceSoundButton
  } from "./elements.js"
 
- const sounds = Sounds()
 
 export default function({controls,timer,sound,}) {
 
