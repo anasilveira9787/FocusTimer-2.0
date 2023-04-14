@@ -41,8 +41,6 @@ export default function() {
         fireplaceSound.pause()
     }
 
-
-
     function pressButton() {
         buttonPressAudio.play()
       }

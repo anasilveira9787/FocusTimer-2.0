@@ -10,9 +10,6 @@ export default function Timer({
         let minutes = Number(minutesDisplay.textContent)
 
     function updateDisplay(newMinutes, seconds) {
-
-
-
         newMinutes = newMinutes === undefined ? minutes : newMinutes
         seconds = seconds === undefined ? 0 : seconds
         minutesDisplay.textContent = String(newMinutes).padStart(2, "0")
